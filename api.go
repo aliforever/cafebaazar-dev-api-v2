@@ -93,7 +93,7 @@ func (ca *CafeBazaarAPI) Authorize(scope string) (token string, err error) {
 	return
 }
 
-func (ca *CafeBazaarAPI) GetAuthorizationTokens(code string) (err error) {
+func (ca *CafeBazaarAPI) GetAuthorizationTokens(code string) (token *Token, err error) {
 	var resp *http.Response
 
 	v := url.Values{}
@@ -108,7 +108,6 @@ func (ca *CafeBazaarAPI) GetAuthorizationTokens(code string) (err error) {
 		return
 	}
 	defer resp.Body.Close()
-	var token *Token
 	j := json.NewDecoder(resp.Body)
 	err = j.Decode(&token)
 	if err != nil {

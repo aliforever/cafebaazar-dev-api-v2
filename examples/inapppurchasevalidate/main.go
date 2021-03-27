@@ -16,5 +16,15 @@ func main() {
 		fmt.Println(err)
 		return
 	}
+	if iapv.ConsumptionState == 0 {
+		fmt.Printf("consumed")
+	} else {
+		fmt.Printf("not consumed")
+	}
+	if iapv.PurchaseState == 0 {
+		fmt.Printf("success")
+	} else {
+		fmt.Printf("refunded")
+	}
 	fmt.Printf("%+v", iapv)
 }

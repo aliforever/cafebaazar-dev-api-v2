@@ -14,7 +14,7 @@ func main() {
 		return
 	}
 
-	err = api.GetAuthorizationTokens(code)
+	token, err := api.GetAuthorizationTokens(code)
 	if err != nil {
 		fmt.Println(err)
 		return
@@ -22,5 +22,5 @@ func main() {
 	// err = api.RefreshToken()
 	// fmt.Println(err)
 	fmt.Println("code is: ", code)
-	fmt.Println("lastToken: ", api.LastToken())
+	fmt.Println("lastToken: ", token)
 }
