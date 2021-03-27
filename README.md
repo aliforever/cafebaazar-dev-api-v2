@@ -2,7 +2,7 @@
 Go [CafeBazaar Developer API Version 2](https://developers.cafebazaar.ir/en/docs/developer-api-v2-introduction/developer-api-v2-getting-started/)
 
 ## Install:
-```go get -u github.com/aliforever/cafebaazar-dev-api-v2```
+```go get -u github.com/aliforever/cafebazaar-dev-api-v2```
 
 ---
 
