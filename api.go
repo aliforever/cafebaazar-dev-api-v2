@@ -160,6 +160,7 @@ func (ca *CafeBazaarAPI) RefreshToken() (err error) {
 }
 
 func (ca *CafeBazaarAPI) InAppPurchaseValidate(packageName, productId, purchaseToken string) (response *InAppPurchaseValidate, err error) {
+	// commit
 	if time.Now().Unix() > ca.lastTokenExpiresAt {
 		err = ca.RefreshToken()
 		if err != nil {
